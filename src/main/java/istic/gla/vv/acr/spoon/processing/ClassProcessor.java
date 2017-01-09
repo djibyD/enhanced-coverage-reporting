@@ -11,6 +11,7 @@ public class ClassProcessor extends AbstractProcessor<CtClass<?>> {
 	public void process(CtClass<?> arg0) {
 		
 		TemplateClass templateClass =new TemplateClass();
+		templateClass.apply(arg0);
 		
 		Substitution.insertAllFields(arg0, templateClass);
 		Substitution.insertAllMethods(arg0, templateClass);

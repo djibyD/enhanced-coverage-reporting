@@ -18,7 +18,7 @@ public class MethodProcessor extends AbstractProcessor<CtMethod> {
 	public void process(CtMethod arg0) {
 		CtBlock methodBody =arg0.getBody();
 		String methodId = arg0.getSimpleName();
-		String codeSnipet = "methodId="+methodId+";\n"+"this.signalMethodExecuted(String methodId)\n ";
+		String codeSnipet = "String methodId="+methodId+";\n"+"this.signalMethodExecuted(String methodId)\n ";
 		Factory factory = arg0.getFactory();
 		CodeFactory codeFactory= factory.Code();
 		CtCodeSnippetStatement cSStatement =codeFactory.createCodeSnippetStatement(codeSnipet);

@@ -11,13 +11,15 @@ public class Runner {
 		String outbinPath2="/home/steve/mworkspace/istic/vv/workspace/testspooned/";
 		
 		Launcher launcher = new Launcher();
-		launcher.addInputResource(path);
+		launcher.addInputResource(path2);
 		launcher.setSourceOutputDirectory(outsrcPath2);
 		launcher.setBinaryOutputDirectory(outbinPath2);
 		ClassProcessor cProcessor = new ClassProcessor();
 		MethodProcessor mProcessor = new MethodProcessor();
+		MethodExecutedProcessor methodExecutedProcessor= new MethodExecutedProcessor();
 		launcher.addProcessor(mProcessor);
 		launcher.addProcessor(cProcessor);
+		launcher.addProcessor(methodExecutedProcessor);
 		
 		launcher.run();
 		
