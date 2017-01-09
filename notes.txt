@@ -1,0 +1,23 @@
+Sttament processeur : Pour chaque statement insere au début de sont code la sonde
+La sonde : une commande qui est lancée lorsque le statement est exécute cette commande à ppur objectif d'écrire dans une structure de donnée 
+
+Une sonde ppour chaque statement
+	comment identifier les statement
+	
+	
+Pour chaque classe une hashMap (k,v) k= nom the la methode, 
+									 v= int conteur
+									 
+pour chaque methode une sonde qui écrit dans la hash map
+
+-Pour chaque block d'un statement inserte au debut la sonde qui se trouve elle même être une statement 
+la question comment construire cette statement
+on peu la construire à partir d'un simple string qui est la representation de cette statement en string
+package reflect.factory.codefactory.createAcodeSnppetStatement
+
+
+---------
+Script d'exécution du projet
+ 1. Clone le projet actuel dans un autre repertoire projetB
+ 2. appliquer les processeur spoon sur  le premier projet et enregistrer le code spoon dans un autre projet
+ 3.lancer le projetB
