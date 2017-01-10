@@ -20,13 +20,18 @@ public class MethodProcessor extends AbstractProcessor<CtMethod> {
 
 	public void process(CtMethod arg0) {
 		CtBlock methodBody =arg0.getBody();
+		
 		String methodId = arg0.getSimpleName();
 		if(!(arg0.hasModifier(ModifierKind.STATIC))){
+		
 		String codeSnipet = "String methodId="+"\""+methodId+"\""+";\n"+"signalMethodExecuted(methodId)\n ";
+		String codeSnipet2 ="prettyPrinter()";
 		Factory factory = arg0.getFactory();
 		CodeFactory codeFactory= factory.Code();
 		CtCodeSnippetStatement cSStatement =codeFactory.createCodeSnippetStatement(codeSnipet);
+		CtCodeSnippetStatement cSStatement2 =codeFactory.createCodeSnippetStatement(codeSnipet2);
 		if(methodBody != null){
+		methodBody.insertBegin(cSStatement2);
 		methodBody.insertBegin(cSStatement);
 		}
 		}

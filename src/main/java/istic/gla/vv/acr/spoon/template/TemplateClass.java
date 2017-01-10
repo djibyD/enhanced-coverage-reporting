@@ -9,7 +9,8 @@ import spoon.template.ExtensionTemplate;
 public class TemplateClass extends ExtensionTemplate {
 	@Parameter
 	public Class<?> templateClass = this.getClass();
-	HashMap<String,Integer> reportMap = new HashMap<String,Integer>();
+	private HashMap<String,Integer> reportMap = new HashMap<String,Integer>();
+	
 	public void signalMethodExecuted(String methodId){
 		
 		Integer oldValue = this.reportMap.get(methodId);
@@ -20,10 +21,16 @@ public class TemplateClass extends ExtensionTemplate {
 		this.reportMap.put(methodId, newValue);
 		}
 		
-		
+	
+	
+	
 	}
-	
-	
+	public void prettyPrinter(){
+		int taille = this.reportMap.size();
+		for(int i=0; i<taille;i++){
+		System.out.println(this.reportMap.get(i).toString());
+		}
+	}
 	
 
 }
