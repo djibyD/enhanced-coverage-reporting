@@ -5,11 +5,11 @@ import spoon.Launcher;
 public class Runner {
 	
 	public static void main(String[] args){
-		String path ="/home/steve/mworkspace/istic/vv/tp/testResources/wordbrain-solver/src/";
-		String path2 = "/home/steve/mworkspace/istic/vv/workspace/test/src";
+		String path ="/home/steve/mworkspace/istic/vv/tp/testResources/wordbrain-solver/src/main";
+		String path2 = "/home/steve/mworkspace/istic/vv/workspace/test/src/";
 		String outsrcPath2="/home/steve/mworkspace/istic/vv/workspace/testspooned/";
 		String outbinPath2="/home/steve/mworkspace/istic/vv/workspace/testspooned/";
-		
+		String outsrcPath="/home/steve/mworkspace/istic/vv/workspace/wordbrainspooned/src/main";
 		Launcher launcher = new Launcher();
 		launcher.addInputResource(path2);
 		launcher.setSourceOutputDirectory(outsrcPath2);
@@ -19,7 +19,7 @@ public class Runner {
 		MethodExecutedProcessor methodExecutedProcessor= new MethodExecutedProcessor();
 		launcher.addProcessor(mProcessor);
 		launcher.addProcessor(cProcessor);
-		launcher.addProcessor(methodExecutedProcessor);
+	//	launcher.addProcessor(methodExecutedProcessor);
 		
 		launcher.run();
 		

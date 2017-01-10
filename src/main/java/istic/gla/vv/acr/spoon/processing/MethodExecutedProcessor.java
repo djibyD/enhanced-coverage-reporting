@@ -10,7 +10,8 @@ import spoon.reflect.factory.Factory;
 public class MethodExecutedProcessor extends AbstractProcessor<CtMethod<?>>{
 
 	public void process(CtMethod<?> arg0) {
-		String codesnipet = "Integer oldValue = this.reportMap.get(methodId);"+
+		String codesnipet ="if (this.reportMap == null){this.reportMap=new HashMap();}\n"+ 
+	"Integer oldValue = this.reportMap.get(methodId);\n"+
 		"if(oldValue==null){\n"+
 				"Integer newValue= new Integer(1);	\n"+
 		" this.reportMap.put(methodId, newValue);}\n"+
