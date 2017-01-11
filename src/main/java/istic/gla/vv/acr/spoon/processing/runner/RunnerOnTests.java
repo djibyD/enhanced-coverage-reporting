@@ -1,5 +1,6 @@
-package istic.gla.vv.acr.spoon.processing;
+package istic.gla.vv.acr.spoon.processing.runner;
 
+import istic.gla.vv.acr.spoon.processing.processor.DefaultClassProcessor;
 import spoon.Launcher;
 
 public class RunnerOnTests {

@@ -1,4 +1,4 @@
-package istic.gla.vv.acr.spoon.processing;
+package istic.gla.vv.acr.spoon.processing.processor;
 
 import java.lang.reflect.Modifier;
 

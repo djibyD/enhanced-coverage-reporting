@@ -1,4 +1,4 @@
-package istic.gla.vv.acr.spoon.processing;
+package istic.gla.vv.acr.spoon.processing.processor;
 
 import istic.gla.vv.acr.spoon.template.TemplateExecuted;
 import spoon.processing.AbstractProcessor;
@@ -31,7 +31,7 @@ public class MethodExecutedProcessor extends AbstractProcessor<CtMethod<?>>{
 		"//int taille = this.reportMap.size();\n"+
 		"//for(int i=0; i<taille;i++){\n"+
 				
-		"System.out.println(this.getClass().getName().to+reportMap.toString());\n"+
+		"System.out.println(this.getClass().getName()+reportMap.toString());\n"+
 		"/*}*/\n}";
 					
 					

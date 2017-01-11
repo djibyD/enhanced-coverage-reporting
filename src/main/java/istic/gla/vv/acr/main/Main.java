@@ -1,7 +1,7 @@
 package istic.gla.vv.acr.main;
 
-import istic.gla.vv.acr.spoon.processing.Runner;
-import istic.gla.vv.acr.spoon.processing.RunnerOnTests;
+import istic.gla.vv.acr.spoon.processing.runner.Runner;
+import istic.gla.vv.acr.spoon.processing.runner.RunnerOnTests;
 
 public class Main {
 	
